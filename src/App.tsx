@@ -47,9 +47,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map(() => (
-                <td key={Math.random()} className="table-cell">
-                  {/* Empty cell */}
+              {tableColumns.map((_, index) => (
+                <td key={index} className="table-cell">
+                  {index + 1}
                 </td>
               ))}
             </tr>
@@ -84,9 +84,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map(() => (
-                <td key={Math.random()} className="table-cell">
-                  {/* Empty cell */}
+              {tableColumns.map((_, index) => (
+                <td key={index} className="table-cell">
+                  {index + 1}
                 </td>
               ))}
             </tr>
@@ -116,9 +116,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map(() => (
-                <td key={Math.random()} className="table-cell">
-                  {/* Empty cell */}
+              {tableColumns.map((_, index) => (
+                <td key={index} className="table-cell">
+                  {index + 1}
                 </td>
               ))}
             </tr>
@@ -148,9 +148,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map(() => (
-                <td key={Math.random()} className="table-cell">
-                  {/* Empty cell */}
+              {tableColumns.map((_, index) => (
+                <td key={index} className="table-cell">
+                  {index + 1}
                 </td>
               ))}
             </tr>
@@ -180,9 +180,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map(() => (
-                <td key={Math.random()} className="table-cell">
-                  {/* Empty cell */}
+              {tableColumns.map((_, index) => (
+                <td key={index} className="table-cell">
+                  {index + 1}
                 </td>
               ))}
             </tr>
@@ -212,9 +212,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map(() => (
-                <td key={Math.random()} className="table-cell">
-                  {/* Empty cell */}
+              {tableColumns.map((_, index) => (
+                <td key={index} className="table-cell">
+                  {index + 1}
                 </td>
               ))}
             </tr>

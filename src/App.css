@@ -158,14 +158,32 @@ button:disabled {
 
   /* Make table responsive */
   .tracker-table {
-    overflow-x: auto;
+    width: 100%;
     margin-bottom: 12px;
+    border-collapse: separate;
+    border-spacing: 2px;
+  }
+
+  .tracker-table tbody {
+    display: table;
+    width: 100%;
+  }
+
+  .tracker-table tr {
+    display: table-row;
+    width: 100%;
   }
 
   .table-cell {
-    min-width: 35px;
-    padding: 6px;
-    font-size: 0.9rem;
+    display: table-cell;
+    width: 10%;
+    min-width: 30px;
+    padding: 8px 4px;
+    font-size: 0.85rem;
+    text-align: center;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
   }
 
   /* Section spacing */
@@ -197,9 +215,10 @@ button:disabled {
   }
 
   .table-cell {
-    min-width: 30px;
-    padding: 4px;
-    font-size: 0.8rem;
+    min-width: 25px;
+    padding: 6px 3px;
+    font-size: 0.75rem;
+    width: 10%;
   }
 }
 
