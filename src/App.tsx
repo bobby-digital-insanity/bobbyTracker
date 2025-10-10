@@ -47,9 +47,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map((col) => (
-                <td className="table-cell">
-                  {/* {col} */}
+              {tableColumns.map(() => (
+                <td key={Math.random()} className="table-cell">
+                  {/* Empty cell */}
                 </td>
               ))}
             </tr>
@@ -84,9 +84,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map((col) => (
-                <td className="table-cell">
-                  {/* {col} */}
+              {tableColumns.map(() => (
+                <td key={Math.random()} className="table-cell">
+                  {/* Empty cell */}
                 </td>
               ))}
             </tr>
@@ -116,9 +116,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map((col) => (
-                <td className="table-cell">
-                  {/* {col} */}
+              {tableColumns.map(() => (
+                <td key={Math.random()} className="table-cell">
+                  {/* Empty cell */}
                 </td>
               ))}
             </tr>
@@ -148,9 +148,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map((col) => (
-                <td className="table-cell">
-                  {/* {col} */}
+              {tableColumns.map(() => (
+                <td key={Math.random()} className="table-cell">
+                  {/* Empty cell */}
                 </td>
               ))}
             </tr>
@@ -180,9 +180,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map((col) => (
-                <td className="table-cell">
-                  {/* {col} */}
+              {tableColumns.map(() => (
+                <td key={Math.random()} className="table-cell">
+                  {/* Empty cell */}
                 </td>
               ))}
             </tr>
@@ -212,9 +212,9 @@ function App() {
         <table className="tracker-table">
           <tbody>
             <tr>
-              {tableColumns.map((col) => (
-                <td className="table-cell">
-                  {/* {col} */}
+              {tableColumns.map(() => (
+                <td key={Math.random()} className="table-cell">
+                  {/* Empty cell */}
                 </td>
               ))}
             </tr>
