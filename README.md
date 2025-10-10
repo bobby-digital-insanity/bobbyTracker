@@ -33,7 +33,7 @@ A daily tracker app that allows you to keep track of personal goals and promote 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/bobby-tracker.git
+   git clone https://github.com/bobby-digital-insanity/bobby-tracker.git
    cd bobby-tracker
    ```
 
@@ -115,7 +115,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Bobby** - [@yourusername](https://github.com/yourusername)
+**Bobby** - [@yourusername](https://github.com/bobby-digital-insanity)
 
 ## 🙏 Acknowledgments
 
