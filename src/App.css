@@ -1,0 +1,114 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Common button styling for all three elements */
+.static-button,
+.input-button,
+.submit-button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: inherit;
+}
+
+/* Static button - disabled but looks like a button */
+.static-button {
+  cursor: default;
+  opacity: 1;
+  justify-self: end;
+}
+
+/* Input button - looks like a button but functions as input */
+.input-button {
+  cursor: text;
+  text-align: center;
+  outline: none;
+  /* Hide the number input arrows */
+  -moz-appearance: textfield;
+}
+
+.input-button::-webkit-outer-spin-button,
+.input-button::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Style the placeholder to look like the input text */
+.input-button::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.input-button:focus {
+  border-color: #646cff;
+}
+
+/* Submit button - normal clickable button */
+.submit-button {
+  cursor: pointer;
+  transition: border-color 0.25s;
+  justify-self: start;
+}
+
+.submit-button:hover {
+  border-color: #646cff;
+}
+
+.submit-button:focus,
+.submit-button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Ensure disabled state doesn't gray out the static button */
+button:disabled {
+  opacity: 1;
+  color: inherit;
+  background-color: inherit;
+  border-color: inherit;
+}
+
+/* Table styles */
+.tracker-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.table-cell {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: inherit;
+  min-width: 40px;
+}
+
+.table-cell:hover {
+  background-color: #2a2a2a;
+}
