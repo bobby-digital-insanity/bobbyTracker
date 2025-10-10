@@ -2,6 +2,7 @@
 
 A daily tracker app that allows you to keep track of personal goals and promote consistency in your daily habits.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20App-green.svg)](https://bobby-digital-insanity.github.io/bobbyTracker/)
 ![Bobby Tracker](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![React](https://img.shields.io/badge/React-19.1.1-61DAFB.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6.svg)
