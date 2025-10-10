@@ -48,8 +48,8 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className="table-cell">
-                  {}
+                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                  {index + 1}
                 </td>
               ))}
             </tr>
@@ -85,8 +85,8 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className="table-cell">
-                  {}
+                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                  {index + 1}
                 </td>
               ))}
             </tr>
@@ -117,8 +117,8 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className="table-cell">
-                  {}
+                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                  {index + 1}
                 </td>
               ))}
             </tr>
@@ -149,8 +149,8 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className="table-cell">
-                  {}
+                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                  {index + 1}
                 </td>
               ))}
             </tr>
@@ -181,8 +181,8 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className="table-cell">
-                  {}
+                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                  {index + 1}
                 </td>
               ))}
             </tr>
@@ -213,8 +213,8 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className="table-cell">
-                  {}
+                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                  {index + 1}
                 </td>
               ))}
             </tr>

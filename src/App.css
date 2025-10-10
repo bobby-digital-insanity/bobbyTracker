@@ -113,6 +113,18 @@ button:disabled {
   background-color: #2a2a2a;
 }
 
+/* Colorful table cell gradient classes */
+.table-cell-1 { background-color: #ff4444; } /* Red */
+.table-cell-2 { background-color: #ff6b35; } /* Red-Orange */
+.table-cell-3 { background-color: #ff8c42; } /* Orange */
+.table-cell-4 { background-color: #ffad5a; } /* Light Orange */
+.table-cell-5 { background-color: #ffd23f; } /* Yellow-Orange */
+.table-cell-6 { background-color: #ffff00; } /* Yellow */
+.table-cell-7 { background-color: #d4e157; } /* Yellow-Green */
+.table-cell-8 { background-color: #9ccc65; } /* Light Green */
+.table-cell-9 { background-color: #66bb6a; } /* Green */
+.table-cell-10 { background-color: #4caf50; } /* Dark Green */
+
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   #root {
@@ -181,9 +193,13 @@ button:disabled {
     padding: 8px 4px;
     font-size: 0.85rem;
     text-align: center;
-    background-color: #1a1a1a;
     border: 1px solid #333;
     border-radius: 4px;
+  }
+
+  /* Override hover for colorful cells on mobile */
+  .table-cell:hover {
+    opacity: 0.8;
   }
 
   /* Section spacing */
