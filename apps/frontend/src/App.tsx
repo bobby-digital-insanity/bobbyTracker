@@ -21,7 +21,12 @@ function App() {
 
   const handleSubmit = async (sectionIndex: number) => {
     try {
-      const response = await fetch('http://localhost:3000/api/randomizeColors', {
+      // Use Render URL in production, localhost in development
+      const API_URL = import.meta.env.PROD 
+        ? 'https://bobby-tracker-backend.onrender.com'
+        : 'http://localhost:3000';
+      
+      const response = await fetch(`${API_URL}/api/randomizeColors`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
