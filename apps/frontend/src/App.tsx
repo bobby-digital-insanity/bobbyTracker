@@ -5,6 +5,7 @@ function App() {
   // State for each input section
   const [inputValues, setInputValues] = useState(['', '', '', '', '', ''])
   const [focusedStates, setFocusedStates] = useState([false, false, false, false, false, false])
+  const [tableColors, setTableColors] = useState<string[][]>(Array(6).fill(Array(10).fill('')))
 
   const updateInputValue = (index: number, value: string) => {
     const newValues = [...inputValues]
@@ -16,6 +17,25 @@ function App() {
     const newStates = [...focusedStates]
     newStates[index] = isFocused
     setFocusedStates(newStates)
+  }
+
+  const handleSubmit = async (sectionIndex: number) => {
+    try {
+      const response = await fetch('http://localhost:3000/api/randomizeColors', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      const data = await response.json()
+      
+      // Update the colors for this specific section
+      const newTableColors = [...tableColors]
+      newTableColors[sectionIndex] = data.colors
+      setTableColors(newTableColors)
+    } catch (error) {
+      console.error('Error fetching colors:', error)
+    }
   }
 
   // Generate array of 10 columns for the table
@@ -48,7 +68,11 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                <td 
+                  key={index} 
+                  className={`table-cell table-cell-${index + 1}`}
+                  style={{ backgroundColor: tableColors[0]?.[index] || '' }}
+                >
                   {index + 1}
                 </td>
               ))}
@@ -73,7 +97,7 @@ function App() {
           />
           
           {/* Third button: Submit button */}
-          <button onClick={() => window.location.href = 'https://bvogs.com'} className="submit-button">
+          <button onClick={() => handleSubmit(0)} className="submit-button">
             Submit
           </button>
         </section>
@@ -85,7 +109,11 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                <td 
+                  key={index} 
+                  className={`table-cell table-cell-${index + 1}`}
+                  style={{ backgroundColor: tableColors[1]?.[index] || '' }}
+                >
                   {index + 1}
                 </td>
               ))}
@@ -105,7 +133,7 @@ function App() {
             placeholder={focusedStates[1] ? "" : "0"}
             className="input-button"
           />
-          <button onClick={() => window.location.href = 'https://bvogs.com'} className="submit-button">
+          <button onClick={() => handleSubmit(1)} className="submit-button">
             Submit
           </button>
         </section>
@@ -117,7 +145,11 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                <td 
+                  key={index} 
+                  className={`table-cell table-cell-${index + 1}`}
+                  style={{ backgroundColor: tableColors[2]?.[index] || '' }}
+                >
                   {index + 1}
                 </td>
               ))}
@@ -137,7 +169,7 @@ function App() {
             placeholder={focusedStates[2] ? "" : "0"}
             className="input-button"
           />
-          <button onClick={() => window.location.href = 'https://bvogs.com'} className="submit-button">
+          <button onClick={() => handleSubmit(2)} className="submit-button">
             Submit
           </button>
         </section>
@@ -149,7 +181,11 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                <td 
+                  key={index} 
+                  className={`table-cell table-cell-${index + 1}`}
+                  style={{ backgroundColor: tableColors[3]?.[index] || '' }}
+                >
                   {index + 1}
                 </td>
               ))}
@@ -169,7 +205,7 @@ function App() {
             placeholder={focusedStates[3] ? "" : "0"}
             className="input-button"
           />
-          <button onClick={() => window.location.href = 'https://bvogs.com'} className="submit-button">
+          <button onClick={() => handleSubmit(3)} className="submit-button">
             Submit
           </button>
         </section>
@@ -181,7 +217,11 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                <td 
+                  key={index} 
+                  className={`table-cell table-cell-${index + 1}`}
+                  style={{ backgroundColor: tableColors[4]?.[index] || '' }}
+                >
                   {index + 1}
                 </td>
               ))}
@@ -201,7 +241,7 @@ function App() {
             placeholder={focusedStates[4] ? "" : "0"}
             className="input-button"
           />
-          <button onClick={() => window.location.href = 'https://bvogs.com'} className="submit-button">
+          <button onClick={() => handleSubmit(4)} className="submit-button">
             Submit
           </button>
         </section>
@@ -213,7 +253,11 @@ function App() {
           <tbody>
             <tr>
               {tableColumns.map((_, index) => (
-                <td key={index} className={`table-cell table-cell-${index + 1}`}>
+                <td 
+                  key={index} 
+                  className={`table-cell table-cell-${index + 1}`}
+                  style={{ backgroundColor: tableColors[5]?.[index] || '' }}
+                >
                   {index + 1}
                 </td>
               ))}
@@ -233,7 +277,7 @@ function App() {
             placeholder={focusedStates[5] ? "" : "0"}
             className="input-button"
           />
-          <button onClick={() => window.location.href = 'https://bvogs.com'} className="submit-button">
+          <button onClick={() => handleSubmit(5)} className="submit-button">
             Submit
           </button>
         </section>
