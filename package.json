@@ -1,1 +1,14 @@
-{"name":"bobby-tracker","private":true,"workspaces":["apps/*","packages/*"],"scripts":{"build":"npm run -w apps/frontend build && npm run -w apps/backend build","dev":"npm run -w apps/backend dev","lint":"npm -ws run lint","frontend":"npm run -w apps/frontend dev"}}
+{
+  "name": "bobby-tracker",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run -w apps/frontend build && npm run -w apps/backend build",
+    "dev": "npm run -w apps/backend dev",
+    "lint": "npm -ws run lint",
+    "frontend": "npm run -w apps/frontend dev"
+  }
+}
