@@ -49,7 +49,7 @@ function App() {
             <tr>
               {tableColumns.map((_, index) => (
                 <td key={index} className="table-cell">
-                  {index + 1}
+                  {}
                 </td>
               ))}
             </tr>
@@ -86,7 +86,7 @@ function App() {
             <tr>
               {tableColumns.map((_, index) => (
                 <td key={index} className="table-cell">
-                  {index + 1}
+                  {}
                 </td>
               ))}
             </tr>
@@ -118,7 +118,7 @@ function App() {
             <tr>
               {tableColumns.map((_, index) => (
                 <td key={index} className="table-cell">
-                  {index + 1}
+                  {}
                 </td>
               ))}
             </tr>
@@ -150,7 +150,7 @@ function App() {
             <tr>
               {tableColumns.map((_, index) => (
                 <td key={index} className="table-cell">
-                  {index + 1}
+                  {}
                 </td>
               ))}
             </tr>
@@ -182,7 +182,7 @@ function App() {
             <tr>
               {tableColumns.map((_, index) => (
                 <td key={index} className="table-cell">
-                  {index + 1}
+                  {}
                 </td>
               ))}
             </tr>
@@ -214,7 +214,7 @@ function App() {
             <tr>
               {tableColumns.map((_, index) => (
                 <td key={index} className="table-cell">
-                  {index + 1}
+                  {}
                 </td>
               ))}
             </tr>
