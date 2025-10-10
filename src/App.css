@@ -112,3 +112,155 @@ button:disabled {
 .table-cell:hover {
   background-color: #2a2a2a;
 }
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .current-date {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Stack cards vertically on mobile */
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 1.5em;
+    max-width: 100%;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  /* Make buttons full width on mobile */
+  .static-button,
+  .input-button,
+  .submit-button {
+    width: 100%;
+    padding: 0.8em 1.2em;
+    font-size: 1rem;
+    min-height: 44px; /* iOS touch target minimum */
+  }
+
+  /* Remove justify-self on mobile */
+  .static-button,
+  .submit-button {
+    justify-self: stretch;
+  }
+
+  /* Make table responsive */
+  .tracker-table {
+    overflow-x: auto;
+    margin-bottom: 12px;
+  }
+
+  .table-cell {
+    min-width: 35px;
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+
+  /* Section spacing */
+  section {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  #root {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1em;
+    gap: 10px;
+  }
+
+  .static-button,
+  .input-button,
+  .submit-button {
+    padding: 0.7em 1em;
+    font-size: 0.95rem;
+  }
+
+  .table-cell {
+    min-width: 30px;
+    padding: 4px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  #root {
+    padding: 0.5rem;
+  }
+
+  .card {
+    padding: 1em;
+  }
+
+  .static-button,
+  .input-button,
+  .submit-button {
+    padding: 0.6em 1em;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #root {
+    padding: 1.5rem;
+  }
+
+  .card {
+    max-width: 500px;
+    padding: 1.8em;
+  }
+
+  .static-button,
+  .input-button,
+  .submit-button {
+    padding: 0.7em 1.1em;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  .submit-button:hover {
+    border-color: transparent;
+  }
+
+  .submit-button:active {
+    border-color: #646cff;
+    background-color: #2a2a2a;
+  }
+
+  .table-cell:hover {
+    background-color: #1a1a1a;
+  }
+
+  .table-cell:active {
+    background-color: #2a2a2a;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .table-cell {
+    border-width: 0.5px;
+  }
+}
