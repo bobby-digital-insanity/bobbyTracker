@@ -1,13 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import './Cigarettes.css'
 
 function App() {
   // State for each input section
   const [inputValues, setInputValues] = useState(['', '', '', '', '', ''])
   const [focusedStates, setFocusedStates] = useState([false, false, false, false, false, false])
   const [tableColors, setTableColors] = useState<string[][]>(Array(6).fill(Array(10).fill('')))
-  const [showCigarettes, setShowCigarettes] = useState(false)
 
   const updateInputValue = (index: number, value: string) => {
     const newValues = [...inputValues]
@@ -60,32 +58,12 @@ function App() {
     return now.toLocaleDateString('en-US', options)
   }
 
-  // Show cigarettes page if toggled
-  if (showCigarettes) {
-    return (
-      <div className="cigarettes-page">
-        <div className="content-overlay">
-          <h1>🚬 Cigarettes 🚬</h1>
-          <p>nice homeboy</p>
-          <button onClick={() => setShowCigarettes(false)} className="back-button">
-            Go Back
-          </button>
-        </div>
-      </div>
-    )
-  }
 
   return (
     <>
       <div>
       </div>
       <h1>Bobby Tracker V1</h1>
-      <button 
-        onClick={() => setShowCigarettes(true)} 
-        className="cigarette-button"
-      >
-        Click here if you love Cigarettes
-      </button>
       <p className="current-date">{formatDate()}</p>
       <p>Streak: 0
       </p>
